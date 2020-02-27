@@ -1,13 +1,14 @@
 // CREATE TABLE users ( user_id SERIAL PRIMARY KEY, 
 //     name VARCHAR(200) NOT NULL, 
 //     password VARCHAR(200) NOT NULL, 
+//     email VARCHAR(200) NOT NULL,
 //     post_id INTEGER
-//    );
+//   );
 // INSERT INTO users 
-// ( name, password, post_id) 
+// ( name, password, email, post_id) 
 // VALUES 
-// ( 'MadMax', 'drowssap', 2 ),
-// ('Bob', 'password', 1);
+// ( 'MadMax', 'drowssap', 'MadMax@dev.com', 2 ),
+// ('Bob', 'password', 'Bob@dev.com', 1);
 ///////////////////////////////
 
 // CREATE TABLE post ( post_id SERIAL PRIMARY KEY, 

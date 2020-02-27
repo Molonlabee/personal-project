@@ -1,22 +1,23 @@
 import React, { Component } from 'react'
+import './Login.css'
 
 class Login extends Component {
     render() {
         return (
-            <main className="container">
-                    <h1>MOOD</h1>
-                 
-                    <div className="Login">
-                        <input placeholder='USER' />
-                        <br/>
-                        <input placeholder='PASSWORD' />
-                        <br/>
-                        <button>Login</button>
-                        <button>Register</button>
+            <main>
+                <section>
+                    <h1>LOGIN PAGE</h1>
+                    <input placeholder='Username' />
+                    <input placeholder='Password' />
+                    <div>
+                        <button>LOGIN</button>
+                        <button>REGISTER</button>
                     </div>
+                </section>
             </main>
         )
     }
 }
 
 export default Login;
+

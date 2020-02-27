@@ -1,3 +1,3 @@
 SELECT * FROM post;
 
--- get_post.pg
+-- getPost.pg
