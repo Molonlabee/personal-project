@@ -1,11 +1,16 @@
 require("dotenv").config();
 const express = require("express");
 const massive = require("massive");
+const session = require("express-session");
+// const {register, login, logOut getUser} = require('./controllers/authController');
+
 const app = express();
-// const {getPost} = require('./controllers/controllers');
+
+//CONTROLLERS
+const auth = require('./controllers/authController')
 
 //DOTENV
-const { SERVER_PORT, CONNECTION_STRING } = process.env;
+const { SERVER_PORT, CONNECTION_STRING, SESSION_SECRET } = process.env;
 
 // DB
 // connects to the heroku db 
@@ -15,15 +20,27 @@ massive(CONNECTION_STRING).then(db => {
 })
 .catch(res => console.log(res))
 
+//BCRYPT
+app.use(
+  session({
+    resave: true,
+    saveUninitialized: false,
+    secret: SESSION_SECRET,
+    cookie: {
+      maxAge: 1000 * 60 * 60 * 24 * 7 * 52 * 1
+    }
+  })
+);
+
 // //USE REQ, RES
 app.use(express.json());
 
-//LISTEN
-app.listen(SERVER_PORT, () => {
-  console.log(`Bat is Back! ${SERVER_PORT}`);
-});
-
 //ENDPOINTS
+
+//BCRYPT
+app.post('/auth/register', auth.register);
+app.post('/auth/login', auth.login);
+app.post('/auth/logout', auth.logout);
 //GET
 // app.get('/api/post', getPost);
 //DELETE
@@ -42,3 +59,8 @@ app.listen(SERVER_PORT, () => {
 // app.put(‘/api/post/:id’, editPost);
 //PATCH OR PUT
 // app.patch(‘/api/post', post);
+
+//LISTEN
+app.listen(SERVER_PORT, () => {
+  console.log(`Bat is Back! ${SERVER_PORT}`);
+});

@@ -14,19 +14,19 @@ class CreatePost extends Component {
                 <section>
                     <div>
                     <img src='{}' />
-                        <p className='hobbies'>Books</p>
+                        <p className='Books'>Books</p>
                     </div>
                     <div>
                         <img src='{}' />
-                        <p className='hobbies'>Music</p>
+                        <p className='Music'>Music</p>
                     </div>
                     <div>
                         <img src='{}' />
-                        <p className='hobbies'>TV</p>
+                        <p className='TV'>TV</p>
                     </div>
                     <div>
                         <img src='{}' />
-                        <p className='hobbies'>Games</p>
+                        <p className='Games'>Games</p>
                     </div>
                 </section>
                 
