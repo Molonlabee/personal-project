@@ -5,31 +5,41 @@ class CreatePost extends Component {
         return (
             <main>
                 <h1>CreatePost.pg</h1>
-                
                 <section>
-                    <img src='' />
-                    <h3>Name</h3>
+                    <img style={{ width: '5rem', height:'5rem' }} src="{}" />
+                    <p>User</p>
+                    <ul>
+                        <li><button>Books</button></li>
+                        <li><button>TV</button></li>
+                        <li><button>Music</button></li>
+                        <li><button>Games</button></li>
+                        <li><button>Photos</button></li>
+                        <li><button>Delete</button></li>
+                        <li><button>Add</button></li>
+                    </ul>
+                    {/* <div>
+                        <button>Games</button>
+                        <button>TV</button>
+                        <button>Music</button>
+                        <button>Photos</button>
+                        <button>Books</button>
+                        <button>Delete</button>
+                        <button>Add</button>
+                    </div> */}
                 </section>
 
                 <section>
-                    <div>
-                    <img src='{}' />
-                        <p className='Books'>Books</p>
-                    </div>
-                    <div>
-                        <img src='{}' />
-                        <p className='Music'>Music</p>
-                    </div>
-                    <div>
-                        <img src='{}' />
-                        <p className='TV'>TV</p>
-                    </div>
-                    <div>
-                        <img src='{}' />
-                        <p className='Games'>Games</p>
-                    </div>
+                    <img style={{ width: '10rem', height:'12rem' }} src="{}" />
+                    <body>
+                    <title>Card Title</title>
+                    <textarea style={{ width: '10rem', height:'9rem' }} >
+                    BAT IS BACK. BAT IS BACK. BAT IS BACK. BAT IS BACK. BAT IS BACK.
+                    BAT IS BACK. BAT IS BACK. BAT IS BACK. BAT IS BACK. BAT IS BACK.
+                    </textarea>
+                    <button variant="post">POST</button>
+                    </body>
                 </section>
-                
+
             </main>
         )
     }

@@ -4,13 +4,30 @@ class Moods extends Component {
     render() {
         return (
             <main>
-                <h1>Moods.pg</h1>
                 <section>
-                    <img height='100px' width='100px' src='https://f0.pngfuel.com/png/442/477/black-profile-illustration-computer-icons-user-profile-avatar-profile-png-clip-art.png' />
-                    <h3>Name</h3>
-                    <button>Entry</button>
+                    <img style={{ width: '5rem', height:'5rem' }} src="{}" />
+                    <p>User</p>
+                    <ul>
+                        <li><button>POST</button></li>
+                        <li><button>Delete</button></li>
+                    </ul>
+                    {/* <div>
+                        <button>ADD</button>
+                        <button>DELETE</button>
+                    </div> */}
                 </section>
-                <h3>Card</h3>
+
+                <section>
+                    <img style={{ width: '8rem', height:'8rem' }} src="{}" />
+                    <img style={{ width: '8rem', height:'8rem' }} src="{}" />
+                    <img style={{ width: '8rem', height:'8rem' }} src="{}" />
+                    <img style={{ width: '8rem', height:'8rem' }} src="{}" />
+                    <img style={{ width: '8rem', height:'8rem' }} src="{}" />
+                    <img style={{ width: '8rem', height:'8rem' }} src="{}" />
+                    <img style={{ width: '8rem', height:'8rem' }} src="{}" />
+                    <img style={{ width: '8rem', height:'8rem' }} src="{}" />
+                    <img style={{ width: '8rem', height:'8rem' }} src="{}" />
+                </section>
             </main>
         )
     }
