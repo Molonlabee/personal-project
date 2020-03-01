@@ -1,20 +1,17 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 
 class Moods extends Component {
     render() {
         return (
             <main>
                 <section>
-                    <img style={{ width: '5rem', height:'5rem' }} src="{}" />
+                    <button><img style={{ width: '5rem', height:'5rem' }} src="{}" /></button>
                     <p>User</p>
-                    <ul>
-                        <li><button>POST</button></li>
-                        <li><button>Delete</button></li>
-                    </ul>
-                    {/* <div>
-                        <button>ADD</button>
+                    <div>
+                        <Link to="/CreatePost"><button>POST</button></Link>
                         <button>DELETE</button>
-                    </div> */}
+                    </div>
                 </section>
 
                 <section>
