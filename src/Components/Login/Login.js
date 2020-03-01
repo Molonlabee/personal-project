@@ -11,8 +11,8 @@ class Login extends Component {
     }
 
     handleClickLogin = () => {
-        this.props
-        .loginUser(this.props.username, this.props.password)
+        //ADDED (this.props.mapStateToProps)
+        this.props.loginUser(this.props.username, this.props.password, this.props.mapStateToProps)
         .then(res => {
         console.log(res)
         }).catch(error => {

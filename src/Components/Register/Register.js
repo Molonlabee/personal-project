@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {connect} from "react-redux"
 import './Register.css'
+import {Link} from 'react-router-dom'
 import {updateState, resetFields, loginUser, registerUser} from '../../redux/reducers/authReducer'
 
 
@@ -33,7 +34,7 @@ class Register extends Component {
                     <p>Profile Email:</p>
                     <input type="text" name='email' onChange={this.handleChange}/>
                 </div>
-                <button onClick={this.handleClickRegister}>Register</button>
+                <Link to='/Moods'><button onClick={this.handleClickRegister}>Register</button></Link>
                 </section>
             </main>
         )
