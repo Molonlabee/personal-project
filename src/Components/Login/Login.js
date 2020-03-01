@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import './Login.css'
+import {connect} from  "react-redux"
 import {Link, Redirect} from 'react-router-dom'
-import {updateState, resetFields, loginUser, getUser} from '../../redux/reducers/authReducer'
+import {updateState, resetFields, loginUser, getUser, registerUser} from '../../redux/reducers/authReducer'
 
 class Login extends Component {
 
@@ -47,5 +48,16 @@ class Login extends Component {
     }
 }
 
-export default Login;
+const mapStateToProps = state => {
+    return {
+        username: state.authReducer.username,
+        password: state.authReducer.password,
+        email: state.authReducer.email
+    }}
+export default connect(mapStateToProps, {
+updateState,
+resetFields,
+registerUser,
+loginUser
+})(Login);
 

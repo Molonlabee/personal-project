@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
+import {connect} from "react-redux"
 import './Register.css'
+import {updateState, resetFields, loginUser, registerUser} from '../../redux/reducers/authReducer'
 
 
 
@@ -36,19 +38,17 @@ class Register extends Component {
             </main>
         )
     }
-    // const mapStateToProps = state => {
-    //     return {
-    //         username: state.authReducer.username,
-    //         password: state.authReducer.password,
-    //         profile_img: state.authReducer.email
-    //     }
+
 }
-
-// export default connect(mapStateToProps, {
-//     updateState,
-//     resetFields,
-//     registerUser,
-//     loginUser
-// })(Register);
-
-export default Register;
+const mapStateToProps = state => {
+        return {
+            username: state.authReducer.username,
+            password: state.authReducer.password,
+            email: state.authReducer.email
+        }}
+export default connect(mapStateToProps, {
+    updateState,
+    resetFields,
+    registerUser,
+    loginUser
+})(Register);

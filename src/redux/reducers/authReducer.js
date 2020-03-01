@@ -5,6 +5,7 @@ const initialState = {
     password: '',
     email: '',
     users: [],
+    loggedIn: false
 }
 
 //constants
@@ -83,6 +84,7 @@ export default function authReducer(state=initialState, action) {
         case `${REGISTER_USER}_FULFILLED`:
             return {
                 ...state,
+                loggedIn: true,
                 loading: false,
             }
         case `${LOGIN_USER}_PENDING`:
@@ -94,6 +96,7 @@ export default function authReducer(state=initialState, action) {
             return {
                 ...state,
                 loading: false,
+                loggedIn: true,
                 user: payload.data
             }
         case `${LOGOUT_USER}_PENDING`:
@@ -105,6 +108,7 @@ export default function authReducer(state=initialState, action) {
             return {
                 ...state,
                 loading: false,
+                loggedIn: false,
                 user: []
             }
         case `${GET_USER}_PENDING`:

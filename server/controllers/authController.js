@@ -8,11 +8,13 @@ const register = (req, res) => {
     bcrypt.hash(password, 10).then((hash) => {
             db.register_User([username, hash, email])
             .then(user => {
+                
                 req.session.user = {
                     id: user[0].id,
                     username: user[0].username,
                     user_email: user[0].email
                 };
+                console.log("Register authController line 17", req.session.user)
                 res.status(200).json(req.session.user)
             });
         })
