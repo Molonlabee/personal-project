@@ -1,9 +1,9 @@
 import axios from 'axios';
 
 // Set up initial state
-const initialState = {
-    user: {}
-};
+// const initialState = {
+//     user: {}
+// };
 
 // action types
 const GET_USER_INFO = 'GET_USER_INFO';

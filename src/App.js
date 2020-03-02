@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import {HashRouter} from 'react-router-dom'
+// import {HashRouter} from 'react-router-dom'
 import routes from './routes'
 // require('./sass/styles.css')
-
- 
 
 
 const App = () => (<div>{routes}</div>);

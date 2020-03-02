@@ -4,22 +4,8 @@ import {connect} from  "react-redux"
 import {logout} from '../../redux/reducers/authReducer'
 
 class Moods extends Component {
-    // constructor() {
-    //     super()
-
-    //     this.state = {
-    //         username: '',
-    //         password: ''
-    //     }
-    // }
-
+   
     render() {
-        // if(!this.props.username){
-        //     return (
-        //         <Redirect to="/" />
-        //     )
-        // }
-
         return (
             <main>
                 <section>
@@ -28,7 +14,7 @@ class Moods extends Component {
                     <div>
                         <Link to="/CreatePost"><button>POST</button></Link>
                         <button>DELETE</button>
-                        <Link to='/'><button onClick={this.props.logout}>Logout</button></Link>
+                        {/* <Link to='/'><button onClick={this.props.logout}>LOGOUT</button></Link> */}
                         
                     </div>
                 </section>
@@ -51,14 +37,5 @@ class Moods extends Component {
 
 export default Moods;
 
-// const mapStateToProps = reduxState => {
-//     return {
-//         username: reduxState.userReducer.username
-       
-//     }
-// }
-// export default connect(mapStateToProps, {
-//     logout
-// })(Moods)
 
 

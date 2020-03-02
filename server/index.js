@@ -3,6 +3,7 @@ const express = require("express");
 const massive = require("massive");
 const session = require("express-session");
 const {register, login, logout, getUser} = require('./controllers/authController');
+const {getGames} = require('./controllers/gamesController')
 
 const app = express();
 
@@ -39,27 +40,21 @@ app.use(express.json());
 //ENDPOINTS
 
 //BCRYPT
-app.post('/auth/register', auth.register);
-app.post('/auth/login', auth.login);
-app.post('/auth/logout', auth.logout);
+app.post('/auth/register', register);
+app.post('/auth/login', login);
+app.post('/auth/logout', logout);
 //GET
-// app.get('/api/post', getPost);
-//DELETE
-// app.delete(‘/api/post/:id’, deletePost);
-// app.delete(‘/api/books/:id’,deletePost);
-// app.delete(‘/api/TV/:id’,deletePost);
-// app.delete(‘/api/games/:id’,deletePost);
-// app.delete(‘/api/photos/:id’,deletePost);
+app.get('/api/games', getGames);
+// app.get('/api/books', getBooks);
+// app.get('/api/music', getMusic);
+// app.get('/api/photos', getPhotos);
+// app.get('/api/tv', getTv);
 //POST
-// app.post(‘/api/post/‘]:id’, addPost);
-// app.post(‘/api/books/:id’,deletePost);
-// app.post(‘/api/TV/:id’,deletePost);
-// app.post(‘/api/games/:id’,deletePost);
-// app.post(‘/api/photos/:id’,deletePost);
+
+//DELETE
+
 //PUT
-// app.put(‘/api/post/:id’, editPost);
-//PATCH OR PUT
-// app.patch(‘/api/post', post);
+
 
 //LISTEN
 app.listen(SERVER_PORT, () => {

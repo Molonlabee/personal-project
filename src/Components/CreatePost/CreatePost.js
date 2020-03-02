@@ -1,15 +1,48 @@
 import React, { Component } from 'react';
-import './CreatePost';
-
+// import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux'
+import {getGames} from '../../redux/reducers/postReducer';
 
 class CreatePost extends Component {
+    // constructor() {
+    //     super()
+
+    //     this.state = {
+    //         // users: '',
+    //         games: ''
+    //     }
+    // }
+
+    // displayUsername() {
+    //     return this.props.user.map((username) => {
+    //         return(
+    //             <p key={user.id}>{user.username}</p>
+    //             );
+    //         });
+    //     }
+    componentDidMount() {
+        this.props.getGames();
+    }
+
+    displayGame() {
+        return this.props.games.map((game) => {
+            return(
+            <p key={game.id}>{game.game}</p>
+            );
+        });
+    }
+
     render() {
         return (
             <main>
                 <h1>CreatePost.pg</h1>
                 <section className='left'>
                     <button><img style={{ width: '5rem', height:'5rem' }} src="{}" /></button>
-                    <p>User</p>
+
+                    <p>USERNAME</p>
+                    {/* <p>{this.displayUsername()}</p> */}
+ 
+                        <p>{this.displayGame()}</p>
                     <div>
                         <button>Games</button>
                         <button>TV</button>
@@ -41,4 +74,12 @@ class CreatePost extends Component {
     }
 }
 
-export default CreatePost;
+// export default CreatePost;
+
+const mapStateToProps = state => {
+    return {
+        games: state.postReducer.games
+    }}
+    
+export default connect(mapStateToProps,
+    {getGames})(CreatePost);

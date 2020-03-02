@@ -54,10 +54,10 @@ const mapStateToProps = state => {
     }}
 
 export default connect(mapStateToProps, {
-updateState,
-resetFields,
-registerUser,
-loginUser,
-getUser
+    updateState,
+    resetFields,
+    registerUser,
+    loginUser,
+    getUser
 })(Login);
 

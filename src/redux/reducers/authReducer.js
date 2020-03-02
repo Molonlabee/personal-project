@@ -74,7 +74,11 @@ export default function authReducer(state=initialState, action) {
             }
         case RESET_FIELDS:
             return {
-                ...state
+                username: '',
+                password: '',
+                email: '',
+                user: [],
+                loggedIn: false
             }
         case `${REGISTER_USER}_PENDING`:
             return {
