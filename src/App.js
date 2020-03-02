@@ -1,19 +1,23 @@
 import React, { Component } from 'react';
 import {HashRouter} from 'react-router-dom'
 import routes from './routes'
-// import './App.css'
+// require('./sass/styles.css')
+
+ 
 
 
-class App extends Component {
-  render() {
-    return (
-        
-      <div>{routes}</div>
-       
-    );
-  }
-}
+const App = () => (<div>{routes}</div>);
+  
+  // class App extends Component {
+  //   render() {
+  //     return (
+          
+  //       <div>{routes}</div>
+         
+  //     );
+  //   }
+  // }
 
-export default App;
-
-//03.01.20
+  export default App;
+  
+  //03.01.20

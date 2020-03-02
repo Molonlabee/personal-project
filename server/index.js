@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const massive = require("massive");
 const session = require("express-session");
-// const {register, login, logOut getUser} = require('./controllers/authController');
+const {register, login, logout, getUser} = require('./controllers/authController');
 
 const app = express();
 
@@ -31,6 +31,7 @@ app.use(
     }
   })
 );
+
 
 // //USE REQ, RES
 app.use(express.json());

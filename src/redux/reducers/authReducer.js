@@ -4,7 +4,7 @@ const initialState = {
     username: '',
     password: '',
     email: '',
-    users: [],
+    user: [],
     loggedIn: false
 }
 
@@ -50,7 +50,7 @@ export const loginUser = (username, password) => {
     }
 }
 
-export const logOut = () => {
+export const logout = () => {
     return {
         type: LOGOUT_USER,
         payload: axios.get('/auth/logout')

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './Login.css'
 import {connect} from  "react-redux"
-import {Link, Redirect} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import {updateState, resetFields, loginUser, getUser, registerUser} from '../../redux/reducers/authReducer'
 
 class Login extends Component {
@@ -30,14 +30,12 @@ class Login extends Component {
         return (
             <main>
                 <section>
-                    <h1>Login</h1>
-                    <div>
-                        <p>Username:</p>
-                        <input type="text" name='username' onChange={this.handleChange}/>
-                        <p>Password:</p>
-                        <input type="password" name='password' onChange={this.handleChange}/>
+                    <h1>Login.pg</h1>
+                    <div className='input'>
+                        <input type="text" name='username' placeholder='USERNAME:'onChange={this.handleChange}/>
+                        <input type="password" name='password' placeholder='PASSWORD:'onChange={this.handleChange}/>
                     </div>
-                    <div>
+                    <div class='btn'>
                         <Link to="/Moods"><button onClick={this.handleClickLogin}>Login</button></Link>
                         <Link to="/Register"><button>Register</button></Link>
                     </div>
@@ -54,10 +52,12 @@ const mapStateToProps = state => {
         password: state.authReducer.password,
         email: state.authReducer.email
     }}
+
 export default connect(mapStateToProps, {
 updateState,
 resetFields,
 registerUser,
-loginUser
+loginUser,
+getUser
 })(Login);
 

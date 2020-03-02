@@ -13,7 +13,5 @@ export default (
             <Route path="/Register" component={Register} />
             <Route path="/Moods" component={Moods} />
             <Route path="/CreatePost" component={CreatePost} />
-
-
         </Switch>
 );
