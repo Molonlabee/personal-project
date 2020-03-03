@@ -3,7 +3,10 @@ const express = require("express");
 const massive = require("massive");
 const session = require("express-session");
 const {register, login, logout, getUser} = require('./controllers/authController');
-const {getGames} = require('./controllers/gamesController')
+const {getGames} = require('./controllers/gamesController');
+const {getBooks} = require('./controllers/booksController');
+const {getPhotos} = require('./controllers/photosController');
+const {getTv} = require('./controllers/tvControllers');
 
 const app = express();
 
@@ -33,7 +36,6 @@ app.use(
   })
 );
 
-
 // //USE REQ, RES
 app.use(express.json());
 
@@ -45,10 +47,10 @@ app.post('/auth/login', login);
 app.post('/auth/logout', logout);
 //GET
 app.get('/api/games', getGames);
-// app.get('/api/books', getBooks);
+app.get('/api/books', getBooks);
 // app.get('/api/music', getMusic);
-// app.get('/api/photos', getPhotos);
-// app.get('/api/tv', getTv);
+app.get('/api/photos', getPhotos);
+app.get('/api/tv', getTv);
 //POST
 
 //DELETE

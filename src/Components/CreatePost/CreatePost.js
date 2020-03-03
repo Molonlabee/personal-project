@@ -1,85 +1,83 @@
 import React, { Component } from 'react';
-// import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux'
-import {getGames} from '../../redux/reducers/postReducer';
+import {getGames, getBooks, getPhotos, getTv} from '../../redux/reducers/postReducer';
 
 class CreatePost extends Component {
-    // constructor() {
-    //     super()
-
-    //     this.state = {
-    //         // users: '',
-    //         games: ''
-    //     }
-    // }
+    
+    componentDidMount() {
+        this.props.getGames();
+        this.props.getBooks();
+        this.props.getPhotos();
+        this.props.getTv();
+    }
 
     // displayUsername() {
     //     return this.props.user.map((username) => {
     //         return(
-    //             <p key={user.id}>{user.username}</p>
+    //             <h1 key={user.id}>{user.username}</h1>
     //             );
     //         });
-    //     }
-    componentDidMount() {
-        this.props.getGames();
-    }
-
-    displayGame() {
-        return this.props.games.map((game) => {
+    // }
+   
+    render() {
+        
+        const mappedGames = this.props.games.map((game, index) => {
             return(
-            <p key={game.id}>{game.game}</p>
+                <div>
+                    <h4 key={index}>{game.game}</h4>
+                </div>
             );
         });
-    }
+       const mappedBooks = this.props.books.map((book, index) => {
+           return(
+               <div>
+                   <h4 key={index}>{book.books}</h4>
+               </div>
+           );
+       });
+       const mappedPhotos = this.props.photos.map((photo, index) => {
+           return(
+               <div>
+                   <h4 key={index}>{photo.photos}</h4>
+               </div>
+           );
+       });
+       const mappedTV = this.props.tv.map((tv, index) => {
+           return(
+               <div>
+                   <h4 key={index}>{tv.tv}</h4>
+               </div>
+           );
+       });
 
-    render() {
         return (
             <main>
                 <h1>CreatePost.pg</h1>
                 <section className='left'>
-                    <button><img style={{ width: '5rem', height:'5rem' }} src="{}" /></button>
+                    
+                    <img style={{ width: '5rem', height:'5rem' }} 
+                    src="https://capenetworks.com/static/images/testimonials/user-icon.svg" />
 
-                    <p>USERNAME</p>
-                    {/* <p>{this.displayUsername()}</p> */}
- 
-                        <p>{this.displayGame()}</p>
-                    <div>
-                        <button>Games</button>
-                        <button>TV</button>
-                        <button>Music</button>
-                        <button>Photos</button>
-                        <button>Books</button>
-                        <button>Delete</button>
-                        <button>Add</button>
-                    </div>
-                </section>
+                    {/* <h1>{this.displayUsername}</h1>  */}
 
-                <section className='right'>
-                    <img style={{ width: '10rem', height:'12rem' }} src="{}" />
-                    <body>
-
-                    <title>Card Title</title>
-
-                    <textarea style={{ width: '10rem', height:'9rem' }} >
-                    BAT IS BACK. BAT IS BACK. BAT IS BACK. BAT IS BACK. BAT IS BACK.
-                    BAT IS BACK. BAT IS BACK. BAT IS BACK. BAT IS BACK. BAT IS BACK.
-                    </textarea>
-
-                    <button>POST</button>
-                    <button>DELETE</button>
-                    </body>
+                    <h4>{mappedGames}</h4>
+                    <h4>{mappedBooks}</h4>
+                    <h4>{mappedPhotos}</h4>
+                    <h4>{mappedTV}</h4>
+                    
                 </section>
             </main>
         )
     }
 }
 
-// export default CreatePost;
-
 const mapStateToProps = state => {
     return {
-        games: state.postReducer.games
+        games: state.postReducer.games,
+        books: state.postReducer.books,
+        photos: state.postReducer.photos,
+        tv: state.postReducer.tv
     }}
     
 export default connect(mapStateToProps,
-    {getGames})(CreatePost);
+    {getGames, getBooks, getPhotos, getTv})(CreatePost);

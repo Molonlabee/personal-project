@@ -55,8 +55,8 @@ VALUES
 ///////////////////////////
 
 CREATE TABLE tv ( tv_id SERIAL PRIMARY KEY, 
-    tv VARCHAR(1000) 
-   );
+tv VARCHAR(1000) 
+);
 
 INSERT INTO tv
 (tv) 
@@ -85,3 +85,28 @@ ALTER COLUMN password TYPE text;
 //////////////////////////
 ALTER TABLE users
 ADD COLUMN img TEXT;
+
+/////////////////////////
+SELECT * FROM post p
+INNER JOIN users u
+ON p.user_id = u.id
+INNER JOIN photos ph 
+ON ph.photos_id = p.photo_id
+INNER JOIN games g
+ON g.games_id = p.game_id
+INNER JOIN books b 
+ON b.books_id = p.books_id
+INNER JOIN tv t
+ON t.tv_id = p.tv_id
+
+-- WHERE u.id = 4;
+-- WHERE p.id = 3;
+
+//////////////////////////
+update post 
+SET tv_id = 1
+Where id = 3
+
+////////////////////////////
+ALTER TABLE post 
+ADD COLUMN tv_id INT references tv(tv_id)

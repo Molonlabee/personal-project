@@ -1,2 +1,1 @@
-SELECT * FROM games
-WHERE game = $1
+SELECT * FROM games;

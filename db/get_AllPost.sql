@@ -15,6 +15,5 @@ ON b.books_id = p.books_id
 INNER JOIN tv t
 ON t.tv_id = p.tv_id
 
--- GETS SINGLE POST (FOR CREATE POST PAGE)
-WHERE P.id = $1;
-
+-- GETS ALL USER POST (FOR MOODS PAGE)
+WHERE u.id = $1;

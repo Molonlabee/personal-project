@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-// import {HashRouter} from 'react-router-dom'
 import routes from './routes'
 // require('./sass/styles.css')
 
 
 const App = () => (<div>{routes}</div>);
   
+export default App;
+
   // class App extends Component {
   //   render() {
   //     return (
@@ -16,6 +17,5 @@ const App = () => (<div>{routes}</div>);
   //   }
   // }
 
-  export default App;
   
-  //03.01.20
+  //BAT is BACK

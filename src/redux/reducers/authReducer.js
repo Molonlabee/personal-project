@@ -1,5 +1,5 @@
 import axios from 'axios'
-
+//INITIAL STATE
 const initialState = {
     username: '',
     password: '',
@@ -7,15 +7,14 @@ const initialState = {
     user: [],
     loggedIn: false
 }
-
-//constants
+//CONSTANTS
 const UPDATE_STATE = 'UPDATE_STATE';
 const RESET_FIELDS = 'RESET_FIELDS';
 const REGISTER_USER = 'REGISTER_USER';
 const LOGIN_USER = 'LOGIN_USER';
 const LOGOUT_USER = 'LOGOUT_USER';
 const GET_USER = 'GET_USER';
-
+//ACTION CREATORS
 export const updateState = e => {
     return {
         type: UPDATE_STATE,
@@ -63,7 +62,7 @@ export const getUser = () => {
         payload: axios.get('/auth/user')
     }
 }
-
+//AUTH REDUCER
 export default function authReducer(state=initialState, action) {
     const {type, payload} = action;
     switch(type) {
