@@ -4,15 +4,18 @@ const massive = require("massive");
 const session = require("express-session");
 const {register, login, logout, getUser} = require('./controllers/authController');
 const {getGames, addGame} = require('./controllers/gamesController');
-const {getBooks} = require('./controllers/booksController');
-const {getPhotos} = require('./controllers/photosController');
-const {getTv} = require('./controllers/tvControllers');
+const {getBooks, addBook, deleteBook, updateBook} = require('./controllers/booksController');
+const {getPhotos, addPhoto} = require('./controllers/photosController');
+const {getTv, addTv} = require('./controllers/tvControllers');
 
 const app = express();
 
 //CONTROLLERS
 const auth = require('./controllers/authController')
 const game = require('./controllers/gamesController')
+const book = require('./controllers/booksController')
+const photo = require('./controllers/photosController')
+const tv = require('./controllers/tvControllers')
 
 //DOTENV
 const { SERVER_PORT, CONNECTION_STRING, SESSION_SECRET } = process.env;
@@ -54,16 +57,17 @@ app.get('/api/photos', getPhotos);
 app.get('/api/tv', getTv);
 //POST
 app.post('/api/game', game.addGame);
-// api.post('/api/book', postBook);
-// api.post('/api/photo', postPhoto);
-// api.post('/api/tv', postTv);
+app.post('/api/book', book.addBook);
+app.post('/api/photo', photo.addPhoto);
+app.post('/api/tv', tv.addTv);
 //DELETE
-// api.delete('/api/game/:id',deleteGame);
-// api.delete('/api/book/:id',deleteBook);
-// api.delete('/api/photo/:id',deletePhoto);
-// api.delete('/api/tv/:id',deleteTv);
+// app.delete('/api/game/:id',deleteGame);
+app.delete('/api/book/:id',deleteBook);
+// app.delete('/api/photo/:id',deletePhoto);
+// app.delete('/api/tv/:id',deleteTv);
 
 //PUT
+app.put('/api/book', updateBook);
 
 
 //LISTEN

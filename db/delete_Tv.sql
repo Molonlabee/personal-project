@@ -1,0 +1,4 @@
+DELETE FROM tv
+WHERE tv_id = $1;
+
+SELECT * FROM tv;

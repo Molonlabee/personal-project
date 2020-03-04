@@ -7,7 +7,8 @@ class CreatePost extends Component {
     constructor() {
         super()
         this.state ={
-            game: ''
+            game: '',
+            book: ''
         }
         this.handleChange = this.handleChange.bind(this)
         this.handleClick = this.handleClick.bind(this)
@@ -26,7 +27,7 @@ class CreatePost extends Component {
     }
    
     render() {
-        console.log(this.props.games)
+        // console.log(this.props.games)
         
         const mappedGames = this.props.games.map((game, index) => {
             return(
@@ -35,23 +36,17 @@ class CreatePost extends Component {
         });
        const mappedBooks = this.props.books.map((book, index) => {
            return(
-               <div>
-                   <p key={index}>{book.books}</p>
-               </div>
+            <option value={book.book}>{book.book}</option>
            );
        });
        const mappedPhotos = this.props.photos.map((photo, index) => {
            return(
-            //    <div>
                    <h4 key={index}>{photo.photos}</h4>
-            //    </div>
            );
        });
        const mappedTV = this.props.tv.map((tv, index) => {
            return(
-               <div>
                    <h4 key={index}>{tv.tv}</h4>
-               </div>
            );
        });
 
@@ -59,21 +54,26 @@ class CreatePost extends Component {
            <main>
                 <h1>CreatePost.pg</h1>
                 <section className='left'>
-                    
                     <img style={{ width: '5rem', height:'5rem' }} 
                     src="https://capenetworks.com/static/images/testimonials/user-icon.svg" />
 
                     {/* <h4>{mappedGames}</h4> */}
-                    <h4>{mappedBooks}</h4>
-                    <h4>{mappedPhotos}</h4>
-                    <h4>{mappedTV}</h4>                  
+                    {/* <h4>{mappedBooks}</h4> */}
+                    {/* <h4>{mappedPhotos}</h4> */}
+                    {/* <h4>{mappedTV}</h4>                   */}
                 </section>
-
-                <input placeholder='GAME' type='text' name='game' onChange={this.handleChange} />
-                <button onClick={this.handleClick}>ADD Game</button>
+                
                 <select>
                     {mappedGames}
                 </select>
+                
+                <select>
+                    {mappedBooks}
+                </select>
+
+                
+                {/* <input placeholder='GAME' type='text' name='game' onChange={this.handleChange} />
+                <button onClick={this.handleClick}>ADD Game</button> */}
 
             </main>
         )

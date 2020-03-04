@@ -17,7 +17,11 @@ const addGame = (req, res) => {
     .then(addedGame => res.status(200).json(addedGame))
     .catch(err => console.log(err))
 }
- 
+
+//DELETE
+
+//PUT
+
 module.exports = {
     getGames,  
     addGame                 
