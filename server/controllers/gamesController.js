@@ -19,10 +19,25 @@ const addGame = (req, res) => {
 }
 
 //DELETE
+const deleteGame = (req, res) => {
+    const db = req.app.get('db')
+    const games_id = +req.params.games_id
+
+    db.delete_Game(games_id).then(response => {
+        res.status(200).json(response)
+    })
+}
 
 //PUT
+const updateGame = (req, res) => {
+    const db = req.app.get('db')
+    const {games} = req.body
+    const games_id = +req.params.games_id
+}
 
 module.exports = {
     getGames,  
-    addGame                 
+    addGame,
+    deleteGame,
+    updateGame                 
 };

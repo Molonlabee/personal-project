@@ -3,10 +3,10 @@ const express = require("express");
 const massive = require("massive");
 const session = require("express-session");
 const {register, login, logout, getUser} = require('./controllers/authController');
-const {getGames, addGame} = require('./controllers/gamesController');
+const {getGames, addGame,deleteGame, updateGame} = require('./controllers/gamesController');
 const {getBooks, addBook, deleteBook, updateBook} = require('./controllers/booksController');
-const {getPhotos, addPhoto} = require('./controllers/photosController');
-const {getTv, addTv} = require('./controllers/tvControllers');
+const {getPhotos, addPhoto, deletePhoto, updatePhoto} = require('./controllers/photosController');
+const {getTv, addTv, deleteTv, updateTv} = require('./controllers/tvControllers');
 
 const app = express();
 
@@ -56,18 +56,21 @@ app.get('/api/books', getBooks);
 app.get('/api/photos', getPhotos);
 app.get('/api/tv', getTv);
 //POST
-app.post('/api/game', game.addGame);
-app.post('/api/book', book.addBook);
-app.post('/api/photo', photo.addPhoto);
-app.post('/api/tv', tv.addTv);
+app.post('/api/game', addGame);
+app.post('/api/book', addBook);
+app.post('/api/photo', addPhoto);
+app.post('/api/tv', addTv);
 //DELETE
-// app.delete('/api/game/:id',deleteGame);
+app.delete('/api/game/:id',deleteGame);
 app.delete('/api/book/:id',deleteBook);
-// app.delete('/api/photo/:id',deletePhoto);
-// app.delete('/api/tv/:id',deleteTv);
+app.delete('/api/photo/:id',deletePhoto);
+app.delete('/api/tv/:id',deleteTv);
 
 //PUT
+app.put('/api/game', updateGame);
 app.put('/api/book', updateBook);
+app.put('./api/photo', updatePhoto);
+app.put('./api/tv', updateTv);
 
 
 //LISTEN

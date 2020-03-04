@@ -18,11 +18,29 @@ const addPhoto = (req, res) => {
 
 }
 //DELETE
+const deletePhoto = (req, res) => {
+    const db = req.app.get('db')
+    const photos_id = +req.params.photos_id
 
+    db.delete_Photo(photos_id).then(response => {
+        res.status(200).json(response)
+    })
+}
 //PUT
+const updatePhoto = (req, res) => {
+    const db = req.app.get('db')
+    const {photos} = req.body
+    const books_id = +req.params.books_id
+
+    db.updateUsers([photos, photos_id]).then(response => {
+        res.status(200).json(response)
+    })
+}
 
 module.exports = {
     getPhotos,
-    addPhoto  
+    addPhoto,
+    deletePhoto,
+    updatePhoto  
                       
 };

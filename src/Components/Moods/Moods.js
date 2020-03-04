@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-import {connect} from  "react-redux"
-import {logout} from '../../redux/reducers/authReducer'
+// import {connect} from  "react-redux"
+// import {logout} from '../../redux/reducers/authReducer'
 
 class Moods extends Component {
    

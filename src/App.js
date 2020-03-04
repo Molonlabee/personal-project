@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import routes from './routes'
 // require('./sass/styles.css')
 
