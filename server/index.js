@@ -3,7 +3,7 @@ const express = require("express");
 const massive = require("massive");
 const session = require("express-session");
 const {register, login, logout, getUser} = require('./controllers/authController');
-const {getGames} = require('./controllers/gamesController');
+const {getGames, addGame} = require('./controllers/gamesController');
 const {getBooks} = require('./controllers/booksController');
 const {getPhotos} = require('./controllers/photosController');
 const {getTv} = require('./controllers/tvControllers');
@@ -12,6 +12,7 @@ const app = express();
 
 //CONTROLLERS
 const auth = require('./controllers/authController')
+const game = require('./controllers/gamesController')
 
 //DOTENV
 const { SERVER_PORT, CONNECTION_STRING, SESSION_SECRET } = process.env;
@@ -52,8 +53,15 @@ app.get('/api/books', getBooks);
 app.get('/api/photos', getPhotos);
 app.get('/api/tv', getTv);
 //POST
-
+app.post('/api/game', game.addGame);
+// api.post('/api/book', postBook);
+// api.post('/api/photo', postPhoto);
+// api.post('/api/tv', postTv);
 //DELETE
+// api.delete('/api/game/:id',deleteGame);
+// api.delete('/api/book/:id',deleteBook);
+// api.delete('/api/photo/:id',deletePhoto);
+// api.delete('/api/tv/:id',deleteTv);
 
 //PUT
 

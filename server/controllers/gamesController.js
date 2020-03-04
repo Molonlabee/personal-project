@@ -8,15 +8,17 @@ const getGames = (req, res) => {
     .catch(err => console.log(err))
 }
 
-//PUT
-// const postGame = (req, res) => {
-//     const db = req.app.post('db');
-//     db.post_Game()
-//     .then(games => res.status(200).json(games))
-//     .catch(err => console.log(err))
-// }
+// POST
+const addGame = (req, res) => {
+    const db = req.app.get('db');
+    //data off of the body
+    const {game} = req.body;
+    db.post_Game(game)
+    .then(addedGame => res.status(200).json(addedGame))
+    .catch(err => console.log(err))
+}
  
 module.exports = {
-    getGames   
-    // postGame                  
+    getGames,  
+    addGame                 
 };

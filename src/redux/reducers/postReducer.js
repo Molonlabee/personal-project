@@ -13,8 +13,10 @@ const initialState = {
 //CONSTANTS 
 const UPDATE_STATE = 'UPDATE_STATE';
 const RESET_FIELDS = 'RESET_FIELDS';
+const CLEAR_FIELDS = 'CLEAR_FIELDS';
 const GET_POST = 'GET_POST';
 const GET_GAMES = 'GET_GAMES';
+const ADD_GAME = 'ADD_GAME';
 const GET_BOOKS = 'GET_BOOKS';
 const GET_MUSIC = 'GET_MUSIC';
 const GET_PHOTOS = 'GET_PHOTOS';
@@ -36,6 +38,14 @@ export const getGames = () => {
     return {
         type: GET_GAMES,
         payload: axios.get('/api/games')
+    }
+}
+export const addGame = (game) => {
+    return {
+        type: ADD_GAME,
+        payload: axios.post('/api/game', {
+            game
+        })
     }
 }
 export const getBooks = () => {
@@ -63,6 +73,7 @@ export const getTv = () => {
         payload: axios.get('/api/tv')
     }
 }
+
 //REDUCER
 export default function postReducer(state=initialState, action) {
     const {type, payload} = action;
@@ -88,7 +99,18 @@ export default function postReducer(state=initialState, action) {
                 ...state,
                 games: payload.data
             }
-    
+        ////////////////////////////
+        case ADD_GAME + '_FULFILLED':
+            return {
+                ...state,
+                games: payload.data
+            }
+        case CLEAR_FIELDS:
+            return {
+                ...state,
+                games: ''
+            }
+        ////////////////////////////
         //BOOKS
         case GET_BOOKS + '_FULFILLED':
             // console.log(payload.data)
