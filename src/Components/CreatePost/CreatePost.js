@@ -64,7 +64,7 @@ class CreatePost extends Component {
                     <h4>{mappedBooks}</h4>
                     <h4>{mappedPhotos}</h4>
                     <h4>{mappedTV}</h4>
-                    
+                                            
                 </section>
             </main>
         )
