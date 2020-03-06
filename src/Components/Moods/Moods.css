@@ -1,1 +1,101 @@
-/* No CSS *//*# sourceMappingURL=Moods.css.map */
+#moods-root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#moods-root .post-box {
+  margin: 0rem 0rem 0rem 12%;
+}
+
+#moods-root .post-container {
+  width: 50rem;
+  height: 45rem;
+  overflow-x: scroll;
+}
+
+#moods-root .post-container .post1 {
+  width: 40rem;
+  height: 40rem;
+  background-color: black;
+  border: 1px white solid;
+  margin: 5% 0% 5% 10%;
+}
+
+#moods-root .post-container .post2 {
+  width: 40rem;
+  height: 40rem;
+  background-color: black;
+  border: 1px white solid;
+  margin: 5% 0% 5% 10%;
+}
+
+#moods-root .post-container .post3 {
+  width: 40rem;
+  height: 40rem;
+  background-color: black;
+  border: 1px white solid;
+  margin: 5% 0% 5% 10%;
+}
+
+#moods-root nav {
+  background-color: #f4f4f4;
+  height: 50rem;
+  width: 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#moods-root nav h1 {
+  font-size: 3rem;
+  margin: 1rem;
+}
+
+#moods-root nav .img-box {
+  width: 12rem;
+  height: 10rem;
+  background-image: url(https://www.hospiscare.co.uk/i/layout/foobox/no-img.jpg);
+  background-position: center;
+}
+
+#moods-root nav .img-box input {
+  margin: 10px 0rem 3rem 5rem;
+}
+
+#moods-root nav .btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#moods-root nav .btn-container button {
+  width: 15rem;
+  height: 5rem;
+  font-size: 3rem;
+  margin: 5rem;
+  font-family: inherit;
+  background-color: darkturquoise;
+}
+
+#moods-root nav .btn-container button:hover {
+  background-color: #00b3b6;
+}
+/*# sourceMappingURL=Moods.css.map */

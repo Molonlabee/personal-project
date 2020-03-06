@@ -1,53 +1,53 @@
-// $colors: (
-//     primary: light gray,
-//     accent: white
-// );
-   
-// $padding:100px;
+body {
+  background-color: #33cccc;
+}
 
-// // $desktop: 840px;
+#login-root {
+  display: flex;
+  justify-content: center;
+  padding: 15rem;
+}
 
-// // @mixin desktop {
-// //     @media (min-width: #{$desktop}) {
-// //         @content;
-// //     }
-// // }
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30rem;
+  height: 15rem;
+  border: 1px black solid;
+  background-color: #b4ffff;
+  padding: 4rem 3rem 18rem 3rem;
+  box-shadow: 12px 12px 2px 1px rgba(0, 4, 58, 0.336);
 
-// @function color($colors-name) {
-//     @return map-get($colors, $colors-name)
-// }
+  i {
+    font-size: 15rem;
+  }
 
+  h1 {
+    color: midnightblue;
+  }
 
-// body, html{
-//     height: 100%;
-// }
+  .input-container {
+    display: flex;
+    flex-direction: column;
 
-// body {
-//    font-family: monospace;
-//     margin: 0;
-//     background: linear-gradient(to bottom right, #009999 32%, #33cccc 76%);
-//         section {
-//             // padding: $padding;
-//             margin: 1em auto;
-//             padding: $padding;
-//             width: 100%;
-//             height: 100%;
-//             position: absolute;
-//             z-index: -1;
-            
-//             div {
-                    
-//                 input {
-//                     background-color: map-get($colors, primary);
-                        
-//                 }
+    input {
+      width: 15rem;
+      height: 2rem;
+      margin-bottom: 1rem;
+    }
+  }
+  .btn-container {
+    width: 16rem;
+    display: flex;
+    justify-content: space-evenly;
 
-//                 button {
-//                      background-color: map-get($colors, primary);
-//                 }
-//             }
-//         }
-
-            
-        
-// }
+    button {
+    width: 5rem;
+    height: 2rem;
+    border-radius: 1rem;
+    background-color: #f4f4f4;
+    background-color: floralwhite;
+    }
+  }
+}

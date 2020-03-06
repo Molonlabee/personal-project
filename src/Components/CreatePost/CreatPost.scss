@@ -1,37 +1,39 @@
-// :root {
-//     font-size: 16px;
-//     font-family: 'Open Sans';
-//     --text-primary: #b6b6b6;
-//     --text-secondary: #ececec;
-//     --bg-primary: #23232e;
-//     --bg-secondary: # 141418;
-// }
+#create-post-root {
+  nav {
+    background-color: #f4f4f4;
+    height: 50rem;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-// body {
-//     color: black;
-//     background-color: white;
-//     margin: 0;
-//     padding: 0;
-// }
+    h1 {
+        font-size: 3rem;
+        margin: 1rem;
+    }
 
-// body::-webkit-scrollbar{
-//     width: 0.25rem ;
-// }
-// body::-webkit-scrollbar-track{
-//     background: #1e1e24;
-// }
-// body::-webkit-slider-thumb{
-//     background: #6649b8;
-// }
+    .img-box {
+      width: 12rem;
+      height: 10rem;
+      background-image: url(https://www.hospiscare.co.uk/i/layout/foobox/no-img.jpg);
+      background-position: center;
+    }
+  }
+  
 
-// main {
-//     margin-left: 5rem;
-//     padding: 1rem;
-// }
+  .icons-container {
 
-// .navbar {
-//     width: 5rem;
-//     height: 100vh 
-//     pistion: fixed;
-//     background-color: var(--bg-primary);
-// }
+    i {
+        font-size: 5rem;
+        padding: 1rem;
+    }
+
+}
+        button {
+            width: 15rem;
+            height: 5rem;
+            font-size: 3rem;
+            font-family: inherit;
+            background-color: darkturquoise
+        }
+}
