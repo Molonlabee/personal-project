@@ -109,34 +109,34 @@ class CreatePost extends Component {
               <div className='nail-13'></div>
               <img src='https://images.pexels.com/photos/1092201/pexels-photo-1092201.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'/>
             </div>
-            <div className='note-14'>
+            {/* <div className='note-14'>
               <div className='nail-14'></div>
               <img src='https://images.pexels.com/photos/458976/pexels-photo-458976.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'/>
-            </div>
-            <div className='note-15'>
+            </div> */}
+            {/* <div className='note-15'>
               <div className='nail-15'></div>
               <img src='https://images.pexels.com/photos/573302/pexels-photo-573302.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'/>
-            </div>
-            <div className='note-16'>
+            </div> */}
+            {/* <div className='note-16'>
               <div className='nail-16'></div>
               <img src='https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'/>
-            </div>
-            <div className='note-17'>
+            </div> */}
+            {/* <div className='note-17'>
               <div className='nail-17'></div>
               <img src='https://images.pexels.com/photos/572861/pexels-photo-572861.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'/>
-            </div>
-            <div className='note-18'>
+            </div> */}
+            {/* <div className='note-18'>
               <div className='nail-18'></div>
               <img src='https://images.pexels.com/photos/618752/pexels-photo-618752.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'/>
-            </div>
-            <div className='note-19'>
+            </div> */}
+            {/* <div className='note-19'>
               <div className='nail-19'></div>
               <img src='https://images.pexels.com/photos/2361/nature-animal-wolf-wilderness.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500'/>
-            </div>
-            <div className='note-20'>
+            </div> */}
+            {/* <div className='note-20'>
               <div className='nail-20'></div>
               <img src='https://images.pexels.com/photos/85773/pexels-photo-85773.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260'/>
-            </div>
+            </div> */}
           </div>
           
           <div className="text-field">
