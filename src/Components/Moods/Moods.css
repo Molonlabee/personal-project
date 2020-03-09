@@ -62,18 +62,15 @@
   margin: 1rem;
 }
 
-#moods-root nav .img-box {
-  width: 12rem;
-  height: 10rem;
-  background-image: url(https://www.hospiscare.co.uk/i/layout/foobox/no-img.jpg);
-  background-position: center;
+#moods-root nav i {
+  font-size: 15rem;
 }
 
-#moods-root nav .img-box input {
+#moods-root nav input {
   margin: 10px 0rem 3rem 5rem;
 }
 
-#moods-root nav .btn-container {
+#moods-root .btn-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,18 +81,21 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 20rem;
+  height: 25rem;
 }
 
-#moods-root nav .btn-container button {
+#moods-root .btn-container button {
   width: 15rem;
   height: 5rem;
   font-size: 3rem;
-  margin: 5rem;
+  margin: 2rem;
   font-family: inherit;
-  background-color: darkturquoise;
+  background: -webkit-gradient(linear, left top, right bottom, from(#006666), to(#00cc99));
+  background: linear-gradient(to bottom right, #006666 0%, #00cc99 100%);
 }
 
-#moods-root nav .btn-container button:hover {
+#moods-root .btn-container button:hover {
   background-color: #00b3b6;
 }
 /*# sourceMappingURL=Moods.css.map */

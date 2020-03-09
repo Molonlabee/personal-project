@@ -1,39 +1,714 @@
+body {
+  margin: 0;
+}
+
 #create-post-root {
-  nav {
-    background-color: #f4f4f4;
-    height: 50rem;
-    width: 20rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #333;
+  height: 70rem;
+  padding: 5rem;
 
-    h1 {
+  .content-container {
+    .board {
+      width: 65rem;
+      height: 40rem;
+      background-image: url("../../images/board-background.png");
+      background-repeat: round;
+      border-radius: 5%;
+
+      .note-1 {
+        width: 15rem;
+        height: 15rem;
+        background-color: #ff2525;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem 0 0 1rem;
+        position: absolute;
+        z-index: 1;
+        transform: rotate(18deg);
+
+        .nail-1 {
+          width: 7%;
+          height: 7%;
+          background-color: #1b1bca;
+          border: 1px solid black;
+          border-radius: 1rem;
+          margin: 3px 0px 0px 0px;
+          position: absolute;
+          z-index: 1;
+        }
+
+        img {
+          width: 92%;
+          height: 92%;
+          margin: 5% 4% 0% 4%;
+        }
+      }
+
+
+
+      .note-2 {
+        width: 15rem;
+        height: 15rem;
+        background-color: #4040ff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 19rem 0px 0px 1rem;
+        position: absolute;
+        z-index: 1;
+        transform: rotate(-7deg);
+
+        .nail-2 {
+          width: 7%;
+          height: 7%;
+          background-color: rgb(206, 34, 34);
+          border: 1px solid black;
+          border-radius: 1rem;
+          margin: 3px 0px 0px 0px;
+          position: absolute;
+          z-index: 1;
+        }
+
+        img {
+          width: 92%;
+          height: 92%;
+          margin: 5% 4% 0% 4%;
+        }
+      }
+
+
+      .note-3 {
+        width: 15rem;
+        height: 15rem;
+        background-color: #ff67ec;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem 0px 0px 16rem;
+        position: absolute;
+        z-index: 1;
+        transform: rotate(-4deg);
+
+        .nail-3 {
+          width: 7%;
+          height: 7%;
+          background-color: #3db43d;;
+          border: 1px solid black;
+          border-radius: 1rem;
+          margin: 3px 0px 0px 0px;
+          position: absolute;
+          z-index: 1;
+        }
+
+        img {
+          width: 92%;
+          height: 92%;
+          margin: 5% 4% 0% 4%;
+        }
+      }
+
+
+
+      .note-4 {
+        width: 15rem;
+        height: 15rem;
+        background-color: #f2f4ff;;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem 3rem 0rem 48rem;
+        position: absolute;
+        z-index: 1;
+        transform: rotate(6deg);
+
+        .nail-4 {
+          width: 7%;
+          height: 7%;
+          background-color: #767676;
+          border: 1px solid black;
+          border-radius: 1rem;
+          margin: 3% 0rem 0px 3%;
+          position: absolute;
+          z-index: 1;
+        }
+
+        img {
+          width: 92%;
+          height: 92%;
+          margin: 5% 4% 0% 4%;
+        }
+      }
+
+    
+      .note-5 {
+        width: 15rem;
+        height: 15rem;
+        background-color: #00ff73;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2rem 0rem 0rem 30rem;
+        position: absolute;
+        z-index: 1;
+        transform: rotate(0deg);
+
+        .nail-5 {
+          width: 7%;
+          height: 7%;
+          background-color: #ce2222;
+          border: 1px solid black;
+          border-radius: 1rem;
+          margin: 2% 0% 0% 2%;
+          position: absolute;
+          z-index: 1;
+        }
+
+        img {
+          width: 92%;
+          height: 92%;
+          margin: 5% 4% 0% 4%;
+        }
+      }
+
+
+      .note-6 {
+        width: 15rem;
+        height: 15rem;
+        background-color: #ffad6d;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 13rem 0rem 0rem 24rem;
+        position: absolute;
+        z-index: 1;
+        transform: rotate(-27deg);
+
+        .nail-6 {
+          width: 7%;
+          height: 7%;
+          background-color: #fbff00;
+          border: 1px solid black;
+          border-radius: 1rem;
+          margin: 3% 0% 0% 44%;
+          position: absolute;
+          z-index: 1;
+        }
+
+        img {
+          width: 92%;
+          height: 92%;
+          margin: 5% 4% 0% 4%;
+        }
+      }
+
+
+      .note-7 {
+        width: 15rem;
+        height: 15rem;
+        background-color: #ff67ec;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24rem 0rem 0rem 48rem;
+        position: absolute;
+        z-index: 1;
+        transform: rotate(-11deg);
+
+        .nail-7 {
+          width: 7%;
+          height: 7%;
+          background-color: #0a0ac8;
+          border: 1px solid black;
+          border-radius: 1rem;
+          margin: 4% 0% 0% 0%;
+          position: absolute;
+          z-index: 1;
+        }
+
+        img {
+          width: 92%;
+          height: 92%;
+          margin: 5% 4% 0% 4%;
+        }
+      }
+
+    
+
+      .note-8 {
+        width: 15rem;
+        height: 15rem;
+        background-color: #ffeb3b;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 27rem 0rem 0rem 17rem;
+        position: absolute;
+        z-index: 1;
+        transform: rotate(-10deg);
+
+
+        .nail-8 {
+          width: 7%;
+          height: 7%;
+          background-color: #ffa2fa;
+          border: 1px solid black;
+          border-radius: 1rem;
+          margin: 2% 0% 0% 0%;
+          position: absolute;
+          z-index: 1;
+        }
+
+        img {
+          width: 92%;
+          height: 92%;
+          margin: 5% 4% 0% 4%;
+        }
+      }
+
+    
+    
+
+      .note-9 {
+        width: 15rem;
+        height: 15rem;
+        background-color: #ca9eff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: -3rem 0rem 0rem 12rem;
+        position: absolute;
+        z-index: 1;
+        transform: rotate(10deg);
+
+        .nail-9 {
+          width: 7%;
+          height: 7%;
+          background-color: #3db43d;
+          border: 1px solid black;
+          border-radius: 1rem;
+          margin: 19% 0% 0% 42%;
+          position: absolute;
+          z-index: 1;
+        }
+
+        img {
+          width: 92%;
+          height: 92%;
+          margin: 5% 4% 0% 4%;
+        }
+      }
+
+    
+
+      .note-10 {
+        width: 15rem;
+        height: 15rem;
+        background-color: #d1ffd4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 31rem 0rem 0rem 33rem;
+        position: absolute;
+        z-index: 1;
+        transform: rotate(2deg);
+
+        .nail-10 {
+          width: 7%;
+          height: 7%;
+          background-color: #3db43d;
+          border: 1px solid black;
+          border-radius: 1rem;
+          margin: 7px 0px 0px 0px;
+          position: absolute;
+          z-index: 1;
+      }
+        }
+
+        img {
+          width: 92%;
+          height: 92%;
+          margin: 5% 4% 0% 4%;
+        }
+      }
+
+    
+    
+
+      .note-11 {
+        width: 15rem;
+        height: 15rem;
+        background-color: #81a8b5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 12rem 0rem 0rem 47rem;
+        position: absolute;
+        z-index: 1;
+        transform: rotate(-24deg);
+
+        .nail-11 {
+          width: 7%;
+          height: 7%;
+          background-color: #f5ff8b;
+          border: 1px solid black;
+          border-radius: 1rem;
+          margin: 3% 0% 0% 12%;
+
+          position: absolute;
+          z-index: 1;
+      }
+        }
+
+        img {
+          width: 92%;
+          height: 92%;
+          margin: 5% 4% 0% 4%;
+        }
+      }
+
+    
+
+      .note-12 {
+        width: 15rem;
+        height: 15rem;
+        background-color: #52b4ff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 14rem 0rem 0rem 16rem;
+        position: absolute;
+        z-index: 1;
+        transform: rotate(-10deg);
+
+        .nail-12 {
+          width: 7%;
+          height: 7%;
+          background-color: #93eeff;
+          border: 1px solid black;
+          border-radius: 1rem;
+          margin: 2% 0px 0px 3%;
+          position: absolute;
+          z-index: 1;
+      }
+        }
+
+        img {
+          width: 92%;
+          height: 92%;
+          margin: 5% 4% 0% 4%;
+        }
+      }
+
+    
+      .note-13 {
+        width: 15rem;
+        height: 15rem;
+        background-color: #ff95f2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 27rem 0rem 0rem 2rem;
+        position: absolute;
+        z-index: 1;
+        transform: rotate(-37deg);
+
+        .nail-13 {
+          width: 7%;
+          height: 7%;
+          background-color: #0a0ac8;
+          border: 1px solid black;
+          border-radius: 1rem;
+          margin: 5% 0% 0% 42%;
+          position: absolute;
+          z-index: 1;
+      }
+        }
+
+        img {
+          width: 92%;
+          height: 92%;
+          margin: 5% 4% 0% 4%;
+        }
+      
+    
+      .note-14 {
+        width: 15rem;
+        height: 15rem;
+        background-color: #ff12b1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 8rem 3rem 0rem 2rem;
+        position: absolute;
+        z-index: 1;
+        transform: rotate(8deg);
+
+        .nail-14 {
+          width: 7%;
+          height: 7%;
+          background-color: #fbff00;
+          border: 1px solid black;
+          border-radius: 1rem;
+          margin: 3% 0% 0% 0%;
+          position: absolute;
+          z-index: 1;
+      }
+        }
+
+        img {
+          width: 92%;
+          height: 92%;
+          margin: 5% 4% 0% 4%;
+        }
+      
+    
+      .note-15 {
+        width: 15rem;
+        height: 15rem;
+        background-color: #bbff26;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 16rem 3rem 0rem 34rem;
+        position: absolute;
+        z-index: 1;
+        transform: rotate(10deg);
+
+        .nail-15 {
+          width: 7%;
+          height: 7%;
+          background-color: #841ed9;
+          border: 1px solid black;
+          border-radius: 1rem;
+          margin: 2% 0% 0% 15%;
+          position: absolute;
+          z-index: 1;
+      }
+        }
+
+        img {
+          width: 92%;
+          height: 92%;
+          margin: 5% 4% 0% 4%;
+        }
+      
+    
+      .note-16 {
+        width: 15rem;
+        height: 15rem;
+        background-color: #eaeaea;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 18rem 0rem 0rem 12rem;
+        position: absolute;
+        z-index: 1;
+        transform: rotate(10deg);
+
+        .nail-16 {
+          width: 7%;
+          height: 7%;
+          background-color: #f01b1b;
+          border: 1px solid black;
+          border-radius: 1rem;
+          margin: 4% 0% 0% 0%;
+          position: absolute;
+          z-index: 1;
+      }
+        }
+
+        img {
+          width: 92%;
+          height: 92%;
+          margin: 5% 4% 0% 4%;
+        }
+      
+    
+      .note-17 {
+        width: 15rem;
+        height: 15rem;
+        background-color: #ff3f1b;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0rem 0rem 0rem 39rem;
+        position: absolute;
+        z-index: 1;
+        transform: rotate(32deg);
+
+        .nail-17 {
+          width: 7%;
+          height: 7%;
+          background-color: #0abbc8;
+          border: 1px solid black;
+          border-radius: 1rem;
+          margin: 3% 0% 0% -10%;
+          position: absolute;
+          z-index: 1;
+      }
+        }
+
+        img {
+          width: 92%;
+          height: 92%;
+          margin: 5% 4% 0% 4%;
+        }
+      
+
+    
+    
+      .note-18 {
+        width: 15rem;
+        height: 15rem;
+        background-color: #5658ff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 14rem 0rem 0rem 53rem;
+        position: absolute;
+        z-index: 1;
+        transform: rotate(67deg);
+}
+
+        .nail-18 {
+          width: 7%;
+          height: 7%;
+          background-color: #e139ba;
+          border: 1px solid black;
+          border-radius: 1rem;
+          margin: 2% 0% 0% -45%;
+          position: absolute;
+          z-index: 1;      
+      }
+        
+
+        img {
+          width: 92%;
+          height: 92%;
+          margin: 5% 4% 0% 4%;
+        }
+      
+
+    
+    
+    
+      .note-19 {
+        width: 15rem;
+        height: 15rem;
+        background-color: #bebeea;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 29rem 0rem 0rem 46rem;
+        position: absolute;
+        z-index: 1;
+        transform: rotate(34deg);
+}
+
+        .nail-19 {
+          width: 7%;
+          height: 7%;
+          background-color: #f4a626;
+          border: 1px solid black;
+          border-radius: 1rem;
+          margin: 2% 0% 0% -45%;
+          position: absolute;
+          z-index: 1;      
+      }
+        
+
+        img {
+          width: 92%;
+          height: 92%;
+          margin: 5% 4% 0% 4%;
+        }
+      
+    
+      .note-20 {
+        width: 15rem;
+        height: 15rem;
+        background-color: #f9b9ff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 26rem 0 0 30rem;
+        position: absolute;
+        z-index: 1;
+        transform: rotate(18deg);
+}
+
+        .nail-20 {
+          width: 7%;
+          height: 7%;
+          background-color: #b3f6b3;
+          border: 1px solid black;
+          border-radius: 1rem;
+          margin: 5% 0% 0% -43%;
+          position: absolute;
+          z-index: 1;
+      }
+        
+
+        img {
+          width: 92%;
+          height: 92%;
+          margin: 5% 4% 0% 4%;
+        }
+      
+
+    
+      
+    
+
+    .text-field {
+      display: flex;
+      flex-direction: column;
+      margin: 7% 0% 5% 3%;
+
+      h1 {
+        border: 1px solid black;
+        background: linear-gradient(to bottom right, #006666 0%, #00cc99 100%);
+        margin: 0 0 0 0;
+        width: 60rem;
+        height: 100%;
+        padding: 1% 1% 1% 1%;
+      }
+      textarea {
+        width: 976px;
+        height: 279px;
+        font-size: 2rem;
+        font-family: monospace;
+        color: lightseagreen;
+        background-color: #f4f4f4;
+        border: 1px black solid;
+      }
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: space-evenly;
+
+      button {
+        width: 10rem;
+        height: 3rem;
+        font-size: 2rem;
+        font-family: inherit;
+        background: linear-gradient(to bottom right, #006666 0%, #00cc99 100%);
+        border: 2px black solid;
+        border-radius: 3rem;
+      }
+      button:hover {
+        background-color: rgb(0, 179, 182);
+      }
+
+      .upload_icon {
+        color: darkturquoise;
         font-size: 3rem;
-        margin: 1rem;
+      }
     }
-
-    .img-box {
-      width: 12rem;
-      height: 10rem;
-      background-image: url(https://www.hospiscare.co.uk/i/layout/foobox/no-img.jpg);
-      background-position: center;
-    }
-  }
   
 
-  .icons-container {
-
-    i {
-        font-size: 5rem;
-        padding: 1rem;
-    }
-
-}
-        button {
-            width: 15rem;
-            height: 5rem;
-            font-size: 3rem;
-            font-family: inherit;
-            background-color: darkturquoise
-        }
-}

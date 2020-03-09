@@ -1,5 +1,6 @@
 body {
-  background-color: #33cccc;
+  background: -webkit-gradient(linear, left top, right bottom, from(#006666), to(#00cc99));
+  background: linear-gradient(to bottom right, #006666 0%, #00cc99 100%);
 }
 
 #login-root {
@@ -26,7 +27,8 @@ body {
   width: 30rem;
   height: 15rem;
   border: 1px black solid;
-  background-color: #b4ffff;
+  background: -webkit-gradient(linear, left top, right bottom, from(#006666), to(#00cc99));
+  background: linear-gradient(to bottom right, #006666 0%, #00cc99 100%);
   padding: 4rem 3rem 18rem 3rem;
   -webkit-box-shadow: 12px 12px 2px 1px rgba(0, 4, 58, 0.336);
           box-shadow: 12px 12px 2px 1px rgba(0, 4, 58, 0.336);
@@ -70,7 +72,6 @@ body {
   width: 5rem;
   height: 2rem;
   border-radius: 1rem;
-  background-color: #f4f4f4;
-  background-color: floralwhite;
+  font-size: 1rem;
 }
 /*# sourceMappingURL=Login.css.map */

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import './CreatPost.css';
+import { Link } from "react-router-dom";
+import "./CreatPost.css";
 import {
   getGames,
   getBooks,
@@ -54,29 +55,107 @@ class CreatePost extends Component {
 
     return (
       <main id="create-post-root">
-          
-        <nav>
-          <h1>user name</h1>
-          <div className="img-box"></div>
-          <div className="icons-container">
-            <div className='game'>
-            <i class="fas fa-gamepad"></i>
+        <div className="content-container">
+          <div className="board">
+            <div className='note-1'>
+              <div className='nail-1'></div>
+              <img src='https://images.pexels.com/photos/2731667/pexels-photo-2731667.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'/>
             </div>
-            <div className='music'>
-            <i class="fas fa-headphones"></i>
+            <div className='note-2'>
+              <div className='nail-2'></div>
+              <img src='https://images.pexels.com/photos/2731664/pexels-photo-2731664.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'/>
             </div>
-            <div className='pictures'>
-            <i class="fas fa-camera"></i>
+            <div className='note-3'>
+              <div className='nail-3'></div>
+              <img src='https://images.pexels.com/photos/1466335/pexels-photo-1466335.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'/>
             </div>
-            <div className='books'>
-            <i class="fas fa-book-open"></i>
+            <div className='note-4'>
+              <div className='nail-4'></div>
+              <img src='https://images.pexels.com/photos/3676962/pexels-photo-3676962.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'/>
+            </div>
+            <div className='note-5'>
+              <div className='nail-5'></div>
+              <img src='https://images.pexels.com/photos/2178565/pexels-photo-2178565.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'/>
+            </div>
+            <div className='note-6'>
+              <div className='nail-6'></div>
+              <img src='https://images.pexels.com/photos/395087/pexels-photo-395087.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'/>
+            </div>
+            <div className='note-7'>
+              <div className='nail-7'></div>
+              <img src='https://images.pexels.com/photos/2753946/pexels-photo-2753946.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'/>
+            </div>
+            <div className='note-8'>
+              <div className='nail-8'></div>
+              <img src='https://images.pexels.com/photos/2753946/pexels-photo-2753946.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'/>
+            </div>
+            <div className='note-9'>
+              <div className='nail-9'></div>
+              <img src='https://images.pexels.com/photos/3536257/pexels-photo-3536257.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'/>
+            </div>
+            <div className='note-10'>
+              <div className='nail-10'></div>
+              <img src='https://images.pexels.com/photos/1047319/pexels-photo-1047319.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'/>
+            </div>
+            <div className='note-11'>
+              <div className='nail-11'></div>
+              <img src='https://images.pexels.com/photos/2731663/pexels-photo-2731663.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'/>
+            </div>
+            <div className='note-12'>
+              <div className='nail-12'></div>
+              <img src='https://images.pexels.com/photos/1466335/pexels-photo-1466335.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'/>
+            </div>
+            <div className='note-13'>
+              <div className='nail-13'></div>
+              <img src='https://images.pexels.com/photos/1092201/pexels-photo-1092201.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'/>
+            </div>
+            <div className='note-14'>
+              <div className='nail-14'></div>
+              <img src='https://images.pexels.com/photos/458976/pexels-photo-458976.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'/>
+            </div>
+            <div className='note-15'>
+              <div className='nail-15'></div>
+              <img src='https://images.pexels.com/photos/573302/pexels-photo-573302.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'/>
+            </div>
+            <div className='note-16'>
+              <div className='nail-16'></div>
+              <img src='https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'/>
+            </div>
+            <div className='note-17'>
+              <div className='nail-17'></div>
+              <img src='https://images.pexels.com/photos/572861/pexels-photo-572861.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'/>
+            </div>
+            <div className='note-18'>
+              <div className='nail-18'></div>
+              <img src='https://images.pexels.com/photos/618752/pexels-photo-618752.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'/>
+            </div>
+            <div className='note-19'>
+              <div className='nail-19'></div>
+              <img src='https://images.pexels.com/photos/2361/nature-animal-wolf-wilderness.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500'/>
+            </div>
+            <div className='note-20'>
+              <div className='nail-20'></div>
+              <img src='https://images.pexels.com/photos/85773/pexels-photo-85773.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260'/>
             </div>
           </div>
-            <button>MOODS</button>
-        </nav>
+          
+          <div className="text-field">
+            <h1>MOOD ENTRY</h1>
 
-        {/*                 
-                <select>
+            <textarea></textarea>
+          </div>
+          <div className="btn-container">
+            <button>SAVE</button>
+            <div className="upload_icon">
+            <i class="fas fa-upload"></i>
+          </div>
+            <Link to="/Moods">
+              <button>CANCEL</button>
+            </Link>
+          </div>
+        </div>
+
+        {/* <select>
                     {mappedGames}
                 </select>
                 
@@ -90,9 +169,9 @@ class CreatePost extends Component {
                 
                 <select>
                     {mappedTV}
-                </select> */}
+                </select>
 
-        {/* <input placeholder='GAME' type='text' name='game' onChange={this.handleChange} />
+        <input placeholder='GAME' type='text' name='game' onChange={this.handleChange} />
                 <button onClick={this.handleClick}>ADD Game</button> */}
       </main>
     );

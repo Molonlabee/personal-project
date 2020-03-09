@@ -1,17 +1,11 @@
 import React, {Component} from 'react';
 import routes from './routes'
-// require('./sass/styles.css')
-
-
-
-  
-
 
   class App extends Component {
     render() {
       return (
-          
-        <div>{routes}</div>
+        <div>{routes}
+        </div>
       );
     }
   }

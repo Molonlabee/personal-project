@@ -16,21 +16,21 @@
       height: 40rem;
       background-color: black;
       border: 1px white solid;
-          margin: 5% 0% 5% 10%;
+      margin: 5% 0% 5% 10%;
     }
     .post2 {
       width: 40rem;
       height: 40rem;
       background-color: black;
       border: 1px white solid;
-          margin: 5% 0% 5% 10%;
+      margin: 5% 0% 5% 10%;
     }
     .post3 {
       width: 40rem;
       height: 40rem;
       background-color: black;
       border: 1px white solid;
-          margin: 5% 0% 5% 10%;
+      margin: 5% 0% 5% 10%;
     }
   }
   nav {
@@ -46,34 +46,33 @@
       margin: 1rem;
     }
 
-    .img-box {
-      width: 12rem;
-      height: 10rem;
-      background-image: url(https://www.hospiscare.co.uk/i/layout/foobox/no-img.jpg);
-      background-position: center;
-
-      input {
-        margin: 10px 0rem 3rem 5rem;
-      }
+    i {
+      font-size: 15rem;
     }
 
-    .btn-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    input {
+      margin: 10px 0rem 3rem 5rem;
+    }
+  }
 
-      button {
-        width: 15rem;
-        height: 5rem;
-        font-size: 3rem;
-        margin: 5rem;
-        font-family: inherit;
-        background-color: darkturquoise;
-      }
+  .btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20rem;
+    height: 25rem;
 
-      button:hover {
-        background-color: rgb(0, 179, 182);
-      }
+    button {
+      width: 15rem;
+      height: 5rem;
+      font-size: 3rem;
+      margin: 2rem;
+      font-family: inherit;
+      background: linear-gradient(to bottom right, #006666 0%, #00cc99 100%);
+    }
+
+    button:hover {
+      background-color: rgb(0, 179, 182);
     }
   }
 }
